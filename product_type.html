@@ -65,17 +65,14 @@
                                 <li><a href="#">Drop Down 4</a></li>
                             </ul>
                         </li> -->
-                        <li><a class="nav-link scrollto" href="#contact">聯絡我們</a></li>
-                        <li><a class="getstarted scrollto" href="#about">開始</a></li>
+                        <li><a class="nav-link scrollto" href="index.html#contact">聯絡我們</a></li>
+                        <li><a class="getstarted scrollto" href="index.html#about">開始</a></li>
                     </ul>
                     <i class="bi bi-list mobile-nav-toggle"></i>
                 </nav><!-- .navbar -->
             </div><!-- End Header Container -->
         </div>
     </header><!-- End Header -->
-
-
-
     <main id="main">
         <!-- ======= Breadcrumbs ======= -->
         <section class="breadcrumbs">
@@ -90,11 +87,17 @@
             </div>
         </section><!-- End Breadcrumbs -->
         <section class="inner-page" style="min-height: 300px;">
-            <div class="container">
-                <p>
-                    Example inner page template
-                </p>
-            </div>
+            <!-- ======= Portfolio Section ======= -->
+            <section id="portfolio" class="portfolio" style="padding: 0;">
+                <div class="container">
+<!--                     <div class="section-title" data-aos="fade-left">
+                        <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+                    </div> -->
+                    <div class="row" id="div_product">
+
+                    </div>
+                </div>
+            </section><!-- End Portfolio Section -->
         </section>
     </main><!-- End #main -->
     <!-- ======= Footer ======= -->
@@ -136,7 +139,6 @@
 </body>
 
 </html>
-
 <script>
 // 獲取當前頁面的 URL
 const url = new URL(window.location.href);
@@ -151,21 +153,30 @@ console.log(paramValue); // 輸出參數的值
 
 $('.product_type_name').html(paramValue)
 
-
-
 $(document).ready(function() {
     fetch('https://sheets.googleapis.com/v4/spreadsheets/1bpjvXp8GWHIGMcYxTqJm_0jJdZSJTHhVJt4cnur-zNA/values/web_product?alt=json&key=AIzaSyAO2ylr4WP_XXvhXmHYjesaIfoz7MYRUD8')
         .then(res => res.json())
         .then(res => {
             var all_product = res.values;
-            var product = [];
+            var productString = ``;
+
             for (var i = 0; i <= all_product.length - 1; i++) {
                 if (all_product[i][3] == paramValue) {
-                    console.log(all_product[i])
+                    productString = productString + `
+                    <div class="col-lg-4 col-md-6 mt-3" >
+                        <div class=" card" onclick="window.location.href='product_details.html?no=${all_product[i][0]}';" style="cursor: pointer;">
+                            <img src="assets/img/portfolio/portfolio-9.jpg" class="img-fluid" alt="">
+                            <div class="card-body">
+                                <div class="badge bg-primary mb-3">${all_product[i][0]}</div>
+                                <h4>${all_product[i][1]} ${all_product[i][2]}</h4>
+                                <p>價格 : ${all_product[i][5]}</p>
+                            </div>
+                        </div>
+                    </div>
+                    `;
                 }
             }
+            $('#div_product').html(productString);
         })
 });
-
-
 </script>

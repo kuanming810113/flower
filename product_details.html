@@ -65,98 +65,65 @@
                                 <li><a href="#">Drop Down 4</a></li>
                             </ul>
                         </li> -->
-                        <li><a class="nav-link scrollto" href="#contact">聯絡我們</a></li>
-                        <li><a class="getstarted scrollto" href="#about">開始</a></li>
+                        <li><a class="nav-link scrollto" href="index.html#contact">聯絡我們</a></li>
+                        <li><a class="getstarted scrollto" href="index.html#about">開始</a></li>
                     </ul>
                     <i class="bi bi-list mobile-nav-toggle"></i>
                 </nav><!-- .navbar -->
             </div><!-- End Header Container -->
         </div>
     </header><!-- End Header -->
-
-
-
-    <!-- ======= Hero Section ======= -->
-    <section id="hero" class="d-flex align-items-center">
-        <div class="container text-center position-relative" data-aos="fade-in" data-aos-delay="200">
-            <h1>每一朵花都是自然的藝術，讓我們一起分享這份美麗</h1>
-            <!-- <h2>每一朵花都是自然的藝術，讓我們一起分享這份美麗</h2> -->
-            <a href="#about" class="btn-get-started scrollto">開始</a>
-        </div>
-    </section><!-- End Hero -->
     <main id="main">
-        <!-- ======= About Section ======= -->
-        <section id="about" class="about">
+        <!-- ======= Breadcrumbs ======= -->
+        <section id="breadcrumbs" class="breadcrumbs">
             <div class="container">
-                <div class="row content">
-                    <div class="col-lg-6" data-aos="fade-right" data-aos-delay="100">
-                        <h2>關於我們</h2>
-                        <h3>
-                            我們是一家位於台北的花店，擁有超過三十多年的經驗。過去，我們主要為各地的花店及網路平台提供花禮代工。但隨著花材成本不斷上漲，加上我本人是一名工程師，我們決定轉型，透過網路平台直接服務廣大顧客。我們希望以最優惠的價格和卓越的品質，為您帶來美好的花卉體驗。
-                        </h3>
-                    </div>
-                    <div class="col-lg-6 pt-4 pt-lg-0 text-center" data-aos="fade-left" data-aos-delay="200">
-                        <img src="./assets/img/team/team-1.jpg" width="300">
-                    </div>
+                <div class="d-flex justify-content-between align-items-center">
+                    <h2>作品</h2>
+                    <ol>
+                        <li id="product_type_link"></li>
+                        <li>Portfolio Details</li>
+                    </ol>
                 </div>
             </div>
-        </section><!-- End About Section -->
-        <!-- ======= Services Section ======= -->
-        <section id="services" class="services section-bg">
+        </section><!-- End Breadcrumbs -->
+        <!-- ======= Portfolio Details Section ======= -->
+        <section id="portfolio-details" class="portfolio-details">
             <div class="container">
-                <div class="row">
-                    <div class="col-lg-4">
-                        <div class="section-title" data-aos="fade-right">
-                            <h2>商品分類</h2>
-                            <p>
-                                精心挑選花禮，不僅能展現個人品味，還能依據不同場合傳遞獨特的情感。無論是熱情奔放的花禮，還是清新脫俗的綠植，合適的選擇能讓禮物更具心意，帶來溫暖與美好的祝福。每一份精心準備的花禮，都傳達著對收禮者的尊重與關愛，讓心意透過花語表達無遺。
-                            </p>
-                        </div>
-                    </div>
+                <div class="row gy-4">
                     <div class="col-lg-8">
-                        <div class="row" id="product_type">
+                        <div class="portfolio-details-slider swiper">
+                            <div class="swiper-wrapper align-items-center">
+                                <div class="swiper-slide">
+                                    <img src="assets/img/portfolio/portfolio-details-1.jpg" alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="assets/img/portfolio/portfolio-details-2.jpg" alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="assets/img/portfolio/portfolio-details-3.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="portfolio-info">
+                            <h3>作品資訊</h3>
+                            <ul>
+                                <li><strong>編號</strong> : <span id='no'></span></li>
+                                <li><strong>品名</strong> : <span id='name'></span></li>
+                                <li><strong>分類</strong> : <span id='type'></span></li>
+                                <li><strong>單位</strong> : <span id='unit'></span></li>
+                            </ul>
+                        </div>
+                        <div class="portfolio-description">
+                            <h2>作品說明</h2>
+                            <p id='illustrate'></p>
                         </div>
                     </div>
                 </div>
             </div>
-        </section><!-- End Services Section -->
-        <!-- ======= Contact Section ======= -->
-        <section id="contact" class="contact">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-4" data-aos="fade-right">
-                        <div class="section-title">
-                            <h2>聯絡我們</h2>
-                            <!-- <p><img src="https://qr-official.line.me/gs/M_207xsods_GW.png?oat_content=qr" width="100"></p> -->
-                            <!-- <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p> -->
-                        </div>
-                    </div>
-                    <div class="col-lg-8" data-aos="fade-up" data-aos-delay="100">
-                        <!--                         <div class="info mt-4">
-                            <i class="bi bi-geo-alt"></i>
-                            <h4>Location:</h4>
-                            <p>A108 Adam Street, New York, NY 535022</p>
-                        </div> -->
-                        <div class="row">
-                            <div class="col-lg-6 mt-4">
-                                <div class="info">
-                                    <i class="bi bi-envelope"></i>
-                                    <h4>Line:</h4>
-                                    <p> <a href="https://lin.ee/crv38hH">點我加入</a> </p>
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="info w-100 mt-4">
-                                    <i class="bi bi-phone"></i>
-                                    <h4>手機:</h4>
-                                    <p>0916983988</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section><!-- End Contact Section -->
+        </section><!-- End Portfolio Details Section -->
     </main><!-- End #main -->
     <!-- ======= Footer ======= -->
     <footer id="footer">
@@ -191,44 +158,48 @@
     <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
     <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
     <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
     <!-- Template Main JS File -->
     <script src="assets/js/main.js"></script>
-    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
 </body>
 
 </html>
-<script>
+
+
+
+<script type="text/javascript">
+// 獲取當前頁面的 URL
+const url = new URL(window.location.href);
+
+// 使用 URLSearchParams 獲取參數
+const params = new URLSearchParams(url.search);
+
+// 獲取特定參數的值
+const paramValue = params.get('no'); // 替換 'paramName' 為您要獲取的參數名稱
+
+//console.log(paramValue); // 輸出參數的值    
+
 $(document).ready(function() {
     fetch('https://sheets.googleapis.com/v4/spreadsheets/1bpjvXp8GWHIGMcYxTqJm_0jJdZSJTHhVJt4cnur-zNA/values/web_product?alt=json&key=AIzaSyAO2ylr4WP_XXvhXmHYjesaIfoz7MYRUD8')
         .then(res => res.json())
         .then(res => {
             var all_product = res.values;
-            var product_type = [];
+            var product = [];
+
             for (var i = 0; i <= all_product.length - 1; i++) {
-                if (i != 0) {
-                    product_type.push(all_product[i][3]);
+                if (all_product[i][0] == paramValue) {
+                    $('#product_type_link').html(`<a href="product_type.html?type=${all_product[i][3]}">${all_product[i][3]}</a>`);
+                    $('#no').html(`${all_product[i][0]}`);
+                    $('#name').html(`${all_product[i][1]}`);
+                    $('#type').html(`${all_product[i][3]}`);
+                    $('#unit').html(`${all_product[i][2]}`);
+                    $('#illustrate').html(`${all_product[i][4]}`);
+                    
+
+                    console.log(all_product[i])
                 }
             }
-            //產品分類
-            product_type = [...new Set(product_type)];
-
-            var typeString = ``;
-
-            for (var i = 0; i <= product_type.length - 1; i++) {
-                typeString = typeString + `
-                <div class="col-md-6 d-flex align-items-stretch mt-4" onclick="window.location.href='product_type.html?type=${product_type[i]}';" style="cursor: pointer;">
-                    <div class="icon-box" data-aos="zoom-in" data-aos-delay="100" style="width:100%;">
-                        <div class="icon">${i+1}</div>
-                        <h4><a href="product_type.html?type=${product_type[i]}">${product_type[i]}</a></h4>
-                        <p></p>
-                    </div>
-                </div>`;
-            }
-
-            $('#product_type').html(typeString);
-
         })
 });
+
 </script>
-<!-- 圖片<img src="https://drive.google.com/thumbnail?id=1AW4_6MYaq5LBjq5lwjUv2zwdlgbECV7l&sz=w1040"> -->
-<!-- 編號  品名  類別  說明  售價  特價  備註  熱門  圖片1 圖片2 圖片3 -->

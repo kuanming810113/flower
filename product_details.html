@@ -82,7 +82,6 @@
                     <ol>
                         <li id="product_type_link"></li>
                         <li>作品</li>
-                        
                     </ol>
                 </div>
             </div>
@@ -93,7 +92,7 @@
                 <div class="row gy-4">
                     <div class="col-lg-8">
                         <span id='product_img'></span>
-<!--                         <div class="portfolio-details-slider swiper">
+                        <!--                         <div class="portfolio-details-slider swiper">
                             <div class="swiper-wrapper align-items-center">
                                 <div class="swiper-slide">
                                     
@@ -104,18 +103,28 @@
                     </div>
                     <div class="col-lg-4">
                         <div class="portfolio-info">
-                            <h3>資訊</h3>
+                            <h3>作品資訊</h3>
                             <ul>
                                 <li><strong>編號</strong> : <span id='no'></span></li>
                                 <li><strong>品名</strong> : <span id='name'></span></li>
                                 <li><strong>分類</strong> : <span id='type'></span></li>
                                 <li><strong>單位</strong> : <span id='unit'></span></li>
-                                <li><strong>價格</strong> : <span id='price'></span></li>
+                                <li style="color:#DAA520;"><strong>價格</strong> : <b>NT$ </b><strong id='price'></strong></li>
+                                <li><strong>尺寸</strong> : <span id='size'></span></li>
+                                <li><strong>說明</strong> : <span id='illustrate'></span></li>
+                                <li><strong>備註</strong> : <span id='remark'></span></li>
                             </ul>
                         </div>
                         <div class="portfolio-description">
-                            <h2>作品說明</h2>
-                            <p id='illustrate'></p>
+                            <h2>訂購前必看</h2>
+                            <ul>
+                                <li>花禮皆不接受以個人觀感為主之描述要求,例如"大器""典雅",您個人與設計師認知將可能有誤差。</li>
+                                <li>花束與各式盆栽花禮皆為純手工製成,非工廠製品,無法一模一樣。若要一模一樣請改買人造花。</li>
+                                <li>鮮花花色於各種光源下照射皆有不同顏色反應, 我們都採當日新鮮花材製作,鮮花皆有可能於外層花瓣有相對應保護瓣等天然樣貌;鮮花要求完全無瑕疵與完美無瑕者,請先連.絡我們進行鮮花挑選,因需汰除非完美花材,需要完美無瑕者須另行報價。</li>
+                                <li>送花到達時會因代收者或環境影響花在該環境的新鮮度表現,蘭花送有焚香處或者有二手菸處,將會嚴重影響花況。</li>
+                                <li>鮮花與高架花籃與各種盆花若無現場自行加水,待原本出貨前加的水被吸光後,花會開始缺水是正常的,也會影響花況。</li>
+                                <li>若您對鮮花收到時對於品質有疑慮,我們都會為您處理,但請勿收到後好幾天了,才抱怨花況;切花類花禮製作後就是開始凋謝每天都會改變鮮度,一定有其保鮮期。若需要花朵耐久不變,請改買人造花或永生花。</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -161,9 +170,6 @@
 </body>
 
 </html>
-
-
-
 <script type="text/javascript">
 // 獲取當前頁面的 URL
 const url = new URL(window.location.href);
@@ -190,14 +196,15 @@ $(document).ready(function() {
                     $('#name').html(`${all_product[i][1]}`);
                     $('#type').html(`${all_product[i][3]}`);
                     $('#unit').html(`${all_product[i][2]}`);
-                    $('#price').html(`${all_product[i][5]}`);
-                    $('#illustrate').html(`${all_product[i][4]}`);
-                    $('#product_img').html(`<img src="https://drive.google.com/thumbnail?id=${all_product[i][8]}&sz=w1366"  class="img-fluid">`);                
+                    $('#size').html(`${all_product[i][4]}`);
+                    $('#price').html(`${all_product[i][6]}`);
+                    $('#illustrate').html(`${all_product[i][5]}`);
+                    $('#remark').html(`${all_product[i][7]}`);
+                    $('#product_img').html(`<img src="https://drive.google.com/thumbnail?id=${all_product[i][9]}&sz=w1366"  class="img-fluid">`);
 
-                    console.log(all_product[i])
+                    // console.log(all_product[i])
                 }
             }
         })
 });
-
 </script>

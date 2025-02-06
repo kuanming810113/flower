@@ -66,7 +66,7 @@
                             </ul>
                         </li> -->
                         <li><a class="nav-link scrollto" href="#contact">聯絡我們</a></li>
-                        <li><a class="getstarted scrollto" href="#about">開始</a></li>
+                        <li><a class="getstarted scrollto" href="index.html#about">開始</a></li>
                     </ul>
                     <i class="bi bi-list mobile-nav-toggle"></i>
                 </nav><!-- .navbar -->
@@ -74,7 +74,6 @@
         </div>
     </header>
     <!-- ======= header end ======= -->
-    
     <main id="main">
         <!-- ======= Breadcrumbs ======= -->
         <section id="breadcrumbs" class="breadcrumbs">
@@ -117,6 +116,14 @@
                                 <li><strong>備註</strong> : <span id='remark'></span></li>
                             </ul>
                         </div>
+                        <div class="mt-3">
+                            <h2>填寫訂購單</h2>
+                            <textarea rows="15" id="order" class="form-control" name="message" rows="5" placeholder="訂購單">
+                            </textarea>
+                            <button type="button" id="copyBtn" class="btn btn-primary mt-3 text-center" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                複製訂購單
+                            </button>
+                        </div>
                         <div class="portfolio-description">
                             <h2>訂購前必看</h2>
                             <ul>
@@ -133,6 +140,24 @@
             </div>
         </section><!-- End Portfolio Details Section -->
     </main><!-- End #main -->
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">訂購單-已成功複製</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id='textareaContent'>
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">關閉</button>
+                    <a href="https://line.me/R/ti/p/@207xsods"  class="btn btn-primary">傳給我們</a>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- ======= Footer ======= -->
     <footer id="footer">
         <div class="container d-md-flex py-4">
@@ -145,15 +170,15 @@
                     <!-- You can delete the links only if you purchased the pro version. -->
                     <!-- Licensing information: https://bootstrapmade.com/license/ -->
                     <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/bethany-free-onepage-bootstrap-theme/ -->
-                    Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+                    <!-- Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> -->
                 </div>
             </div>
             <div class="social-links text-center text-md-right pt-3 pt-md-0">
-                <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+<!--                 <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
                 <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
                 <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
                 <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-                <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+                <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a> -->
             </div>
         </div>
     </footer><!-- End Footer -->
@@ -203,10 +228,32 @@ $(document).ready(function() {
                     $('#illustrate').html(`${all_product[i][5]}`);
                     $('#remark').html(`${all_product[i][7]}`);
                     $('#product_img').html(`<img src="https://drive.google.com/thumbnail?id=${all_product[i][9]}&sz=w1366"  class="img-fluid">`);
+                    $("#order").val(`作品編號：${all_product[i][0]}
+送達日期：
+送達地址：
+數    量：${all_product[i][2]}
+-----------------------------
+花卡內容：
+上款：對方的公司或名字
+中款：賀詞/想跟對方說的話
+落款：自己的公司或姓名
+-----------------------------
+在麻煩提供「落款名稱、姓名」
+卡片打好會給您確認！
+花送到場會在回傳照片給您！`);
+
 
                     // console.log(all_product[i])
                 }
             }
         })
+});
+
+$("#copyBtn").click(function() {
+    var textarea = $("#order");
+    textarea.select(); // 選取內容
+    document.execCommand("copy"); // 複製到剪貼簿
+    let content = textarea.val();
+    $("#textareaContent").html(content.replace(/\n/g, "<br>")); // 替換換行符為 <br>
 });
 </script>

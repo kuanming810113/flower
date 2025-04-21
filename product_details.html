@@ -92,7 +92,9 @@
             <div class="container">
                 <div class="row gy-4">
                     <div class="col-lg-8">
-                        <span id='product_img'></span>
+                        <span id='product_img1'></span>
+                        <span id='product_img2'></span>
+                        <span id='product_img3'></span>
                         <!--                         <div class="portfolio-details-slider swiper">
                             <div class="swiper-wrapper align-items-center">
                                 <div class="swiper-slide">
@@ -228,7 +230,9 @@ $(document).ready(function() {
                     $('#price').html(`${all_product[i][6]}`);
                     $('#illustrate').html(`${all_product[i][5]}`);
                     $('#remark').html(`${all_product[i][7]}`);
-                    $('#product_img').html(`<img src="https://drive.google.com/thumbnail?id=${all_product[i][9]}&sz=w1366"  class="img-fluid">`);
+                    $('#product_img1').html(`<img src="https://drive.google.com/thumbnail?id=${all_product[i][9]}&sz=w1366"  class="img-fluid">`);
+                    $('#product_img2').html(`<img src="https://drive.google.com/thumbnail?id=${all_product[i][10]}&sz=w1366"  class="img-fluid">`);
+                    $('#product_img3').html(`<img src="https://drive.google.com/thumbnail?id=${all_product[i][11]}&sz=w1366"  class="img-fluid">`);
                     $("#order").val(`作品編號：${all_product[i][0]}
 送達日期：
 送達地址：
